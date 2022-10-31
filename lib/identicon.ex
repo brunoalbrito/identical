@@ -16,6 +16,7 @@ defmodule Identicon do
   def pick_color(image) do
     %Identicon.Image{hex: hex_list} = image
     [r, g, b | _tail] = hex_list
-    [r, g, b]
+
+    %Identicon.Image{image | color: {r, g, b}}
   end
 end
